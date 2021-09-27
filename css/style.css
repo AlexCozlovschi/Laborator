@@ -367,6 +367,9 @@ body {
 .nav-link {
     text-decoration: none;
     color: black;
+    border: none;
+    padding: 0;
+    border-spacing: 0;
 }
 
 .nav-link:hover{
