@@ -2,7 +2,9 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+li{
+    list-style: none;
+}
 .header__left img {
     height: 40px;
 }
