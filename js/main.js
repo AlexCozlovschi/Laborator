@@ -21,3 +21,24 @@ function expand(){
         state=false;
     }
 }
+
+function addToSelect(target, min, max){
+    if (!target){
+        return false;
+    }
+    else {
+
+        select = document.getElementById(target);
+
+        for (var i = min; i<=max; i++){
+            var opt = document.createElement('option');
+            opt.value = i;
+            opt.innerHTML = i;
+            select.appendChild(opt);
+        }
+    }
+}
+date = new Date().getFullYear()
+
+addToSelect("bd_date", 1,31)
+addToSelect("bd_year", date - 13, date + 80)
