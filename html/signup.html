@@ -5,26 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sign-up</title>
+
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     
     <nav id="nav">
      <ul class="left-ul">
-         <li><a href="home.html">Facebook</a></li>
+         <li><a href="html/home.html">Facebook</a></li>
      </ul>
      <div class="empty"></div>
-     <ul class="right-ul">
-         <li>
-             <input type="email" class="nav-control" placeholder="Enter email...">
-         </li>
-         <li>
-            <input type="password" class="nav-control" placeholder="Enter password...">
-        </li>
-        <li>
-            <input type="submit" class="nav-btn" value="Login">
-        </li>
-     </ul>
+        <form action="" id="login_f" >
+            <div class="form-group">
+                <input name="log_email" type="text"  class="control thrid" placeholder=" Email">
+                <input id="log_pas" type="password" class="control thrid" placeholder="Enter password...">
+                <button type="submit" class="btn" > Login</button>
+            </div>
+
+
+
+
+        </form>
     </nav>
     <!-- Close nav -->
 
@@ -44,14 +45,14 @@
            <p class="text">It's free and always will be.</p>
            <form action="" id="formSection">
                <div class="form-group">
-                   <input type="text" class="control half" placeholder="First Name">
-                   <input type="text" class="control half" placeholder="Last Name">
+                   <input type="text" class="control half" required="true" placeholder="First Name">
+                   <input type="text" class="control half" required="true" placeholder="Last Name">
                </div>
                <div class="form-group">
-                   <input type="text" class="control" placeholder="Mobile number or Email">
+                   <input name="email" type="text" class="control" required="true" placeholder=" Email">
                </div>
                <div class="form-group">
-                   <input type="password" class="control" placeholder="New Password">
+                   <input name = "password" type="password" required="true" class="control" placeholder="New Password">
                </div>
                <div class="form-group">
                    <p class="birth">Birthday</p>
@@ -85,7 +86,7 @@
                    <p class="acord">By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy. You may receive SMS notifications from us and can opt out at any time.</p>
                </div>
                <div class="form-group">
-                   <button class="btn">Sign Up</button>
+                   <button class="btn" type="submit">Sign Up</button>
                </div>
 
            </form>
