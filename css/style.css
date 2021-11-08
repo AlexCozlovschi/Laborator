@@ -377,6 +377,11 @@ body {
 .nav-link:hover{
 
 }
+.post_img_pic{
+    height: 400px;
+    weight: 400px
+}
+
 *
 {
     margin: 0;
@@ -565,3 +570,4 @@ select {
         width: 100%;
     }
 }
+
