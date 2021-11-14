@@ -47,13 +47,21 @@ function isEmail(email) {
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return regex.test(email);
 }
+function testpas(s) {
+    var re = /[a-z]\d|\d[a-z]/i;
+    return re.test(s) && s.length > 5;
+}
 
-const reg_form = document.getElementById("formSection")
+const reg_form = document.getElementById("formR")
 
 reg_form.addEventListener('submit', (event)=>{
     email = reg_form.elements['email'].value
-    //alert(reg_form.elements['email'].value)
-    alert(isEmail(email))
+    if (!isEmail(email)){
+        alert("Wrong email input")
+    }
+    else {
+        alert("Succes")
+    }
 })
 
 const login = document.getElementById("login_f")
@@ -63,10 +71,17 @@ login.addEventListener('submit',(event)=>{
          alert("Wrong email input")
      }
      else {
-         window.open("http://localhost:63342/Laborator/html/home.html?_ijt=4r7s1slaqsfrvbv7nvttgs5sb0&_ij_reload=RELOAD_ON_SAVE")
+         alert("Succes")
      }
 
 })
 
+function validat(){
+    var email = document.forms["formR"]["email"].value;
+    if (!isEmail(email)){
+        alert("Wrong email input")
+    }
+
+}
 
 

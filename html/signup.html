@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,92 +7,115 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sign-up</title>
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/signup.css">
 </head>
 <body>
-    
-    <nav id="nav">
-     <ul class="left-ul">
-         <li><a href="html/home.html">Facebook</a></li>
-     </ul>
-     <div class="empty"></div>
-        <form action="" id="login_f" >
+
+<nav id="nav">
+    <ul class="left-ul">
+        <li><a href="html/home.html">Facebook</a></li>
+    </ul>
+    <div class="empty"></div>
+    <form action="../php/validation_log.php" id="login_f" method="post">
+        <div class="form-group">
+            <input name="log_email" type="text"  class="control thrid" placeholder=" Email">
+            <?php if(isset($email_error_l)){ ?>
+            <p class="error"><?php echo $email_error_l?></p>
+            <?php } ?>
+            <input name="log_pas" type="password" class="control thrid" placeholder="Enter password...">
+            <?php if(isset($password_error_l)){ ?>
+            <p class="error"><?php echo $password_error_l?></p>
+            <?php } ?>
+            <button type="submit" class="btn" > Login</button>
+
+
+        </div>
+
+
+
+
+    </form>
+</nav>
+<!-- Close nav -->
+
+<div class="container">
+    <div class="left-section">
+        <div class="left-heading">
+            <h3>Facebook helps you connect and share with the people in your life.</h3>
+            <!-- <div class="image">
+                 <img src="../img/ivan-turbinca.jpg" alt="">
+             </div> -->
+        </div>
+    </div>
+    <div class="right-section">
+        <h1 class="form-heading">
+            Create an account
+        </h1>
+
+
+        <p class="text">It's free and always will be.</p>
+        <form action="../php/validation_reg.php" id="formR" method="post">
             <div class="form-group">
-                <input name="log_email" type="text"  class="control thrid" placeholder=" Email">
-                <input id="log_pas" type="password" class="control thrid" placeholder="Enter password...">
-                <button type="submit" class="btn" > Login</button>
+                <input name="name" type="text" class="control half"  placeholder="First Name">
+                <?php if(isset($name_error)){ ?>
+                <p class="error"><?php echo $name_error?></p>
+                <?php } ?>
+                <input name="surename" type="text" class="control half"  placeholder="Last Name">
+                <?php if(isset($surename_error)){ ?>
+                <p class="error"><?php echo $surename_error?></p>
+                <?php } ?>
+            </div>
+            <div class="form-group">
+                <input name="email" type="text" class="control"  placeholder=" Email">
+                <?php if(isset($email_error)){ ?>
+                <p class="error"><?php echo $email_error?></p>
+                <?php } ?>
+            </div>
+            <div class="form-group">
+                <input name = "password" type="password"  class="control" placeholder="New Password">
+                <?php if(isset($password_error)){ ?>
+                <p class="error"><?php echo $password_error?></p>
+                <?php } ?>
+            </div>
+            <div class="form-group">
+                <p class="birth">Birthday</p>
+                <select  id="bd_date" >
+
+                </select>
+                <select  id="bd_month">
+                    <option value="">Jan</option>
+                    <option value="">Feb</option>
+                    <option value="">Mar</option>
+                    <option value="">Apr</option>
+                    <option value="">May</option>
+                    <option value="">June</option>
+                    <option value="">July</option>
+                    <option value="">Aug</option>
+                    <option value="">Sept</option>
+                    <option value="">Oct</option>
+                    <option value="">Nov</option>
+                    <option value="">Dec</option>
+
+                </select>
+                <select  id="bd_year">
+
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="radio" name="" id="female"> <b>Female</b>
+                <input type="radio" name="" id="male"> <b>Male</b>
+            </div>
+            <div class="form-group">
+                <p class="acord">By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy. You may receive SMS notifications from us and can opt out at any time.</p>
+            </div>
+            <div class="form-group">
+                <button class="btn" type="submit">Sign Up</button>
             </div>
 
-
-
-
         </form>
-    </nav>
-    <!-- Close nav -->
+    </div>
+</div>
+<script src = "../js/main.js" type="text/javascript" > </script>
+</body>
 
-    <div class="container">
-        <div class="left-section">
-         <div class="left-heading">
-             <h3>Facebook helps you connect and share with the people in your life.</h3>
-             <!-- <div class="image">
-                  <img src="../img/ivan-turbinca.jpg" alt="">
-              </div> -->
-          </div>
-         </div>
-         <div class="right-section">
-           <h1 class="form-heading">
-             Create an account
-           </h1>
-           <p class="text">It's free and always will be.</p>
-           <form action="" id="formSection">
-               <div class="form-group">
-                   <input type="text" class="control half" required="true" placeholder="First Name">
-                   <input type="text" class="control half" required="true" placeholder="Last Name">
-               </div>
-               <div class="form-group">
-                   <input name="email" type="text" class="control" required="true" placeholder=" Email">
-               </div>
-               <div class="form-group">
-                   <input name = "password" type="password" required="true" class="control" placeholder="New Password">
-               </div>
-               <div class="form-group">
-                   <p class="birth">Birthday</p>
-                   <select  id="bd_date" >
-
-                   </select>
-                   <select  id="bd_month">
-                       <option value="">Jan</option>
-                       <option value="">Feb</option>
-                       <option value="">Mar</option>
-                       <option value="">Apr</option>
-                       <option value="">May</option>
-                       <option value="">June</option>
-                       <option value="">July</option>
-                       <option value="">Aug</option>
-                       <option value="">Sept</option>
-                       <option value="">Oct</option>
-                       <option value="">Nov</option>
-                       <option value="">Dec</option>
-
-                 </select>
-                 <select  id="bd_year">
-
-                 </select>
-               </div>
-               <div class="form-group">
-                   <input type="radio" name="" id="female"> <b>Female</b>
-                   <input type="radio" name="" id="male"> <b>Male</b>
-               </div>
-               <div class="form-group">
-                   <p class="acord">By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy. You may receive SMS notifications from us and can opt out at any time.</p>
-               </div>
-               <div class="form-group">
-                   <button class="btn" type="submit">Sign Up</button>
-               </div>
-
-           </form>
-         </div>
-     </div>
-     <script src = "../js/main.js" type="text/javascript" > </script>
- </body>
- </html>
+</html>
