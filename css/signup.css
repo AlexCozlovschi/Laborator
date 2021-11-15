@@ -191,4 +191,8 @@ select {
     }
 }
 
+input.error{
+    border-bottom-color: red;
+
+}
 .error {color: #FF0000;}
