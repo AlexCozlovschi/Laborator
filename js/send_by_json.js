@@ -9,9 +9,10 @@ $(document).ready(function (){
                 email:$('#email').val()
 
             },
-            url: "../php/validation_reg.php",
+            url: "http://localhost/php/validation_log.php",
             dataType: 'json',
-            async: false})
+            async: false
+        });
 
     })
 });
