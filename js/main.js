@@ -59,9 +59,7 @@ reg_form.addEventListener('submit', (event)=>{
     if (!isEmail(email)){
         alert("Wrong email input")
     }
-    else {
-        alert("Succes")
-    }
+
 })
 
 const login = document.getElementById("login_f")
@@ -70,9 +68,7 @@ login.addEventListener('submit',(event)=>{
      if (!isEmail(email)){
          alert("Wrong email input")
      }
-     else {
-         alert("Succes")
-     }
+
 
 })
 
