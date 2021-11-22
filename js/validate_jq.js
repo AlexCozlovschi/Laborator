@@ -22,4 +22,15 @@ $(document).ready(function() {
             }
         }
     });
+    $('#reg_submit').click(function (){
+
+        $.post("validation_reg.php",
+            {name:$('#name').val(), surname: $('#surname').val(),
+                password:$('#password').val(), email:$('#email').val()})
+
+    })
+
 });
+
+
+

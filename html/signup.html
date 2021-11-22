@@ -2,8 +2,8 @@
     if(!isset($name)){
         $name = '';
     }
-    if(!isset($surename)){
-        $surename = '';
+    if(!isset($surname)){
+        $surname = '';
     }
     if(!isset($email)){
         $email = '';
@@ -66,28 +66,28 @@
 
 
         <p class="text">It's free and always will be.</p>
-        <form action="../php/validation_reg.php" id="formR" method="post">
+        <form action="" id="formR" method="post">
             <div class="form-group">
-                <input name="name" type="text" class="control half"  placeholder="First Name" value="<?php echo htmlspecialchars
+                <input id="name" name="name" type="text" class="control half"  placeholder="First Name" value="<?php echo htmlspecialchars
                 ($name)?>">
                 <?php if(isset($name_error)){ ?>
                 <p class="error"><?php echo $name_error?></p>
                 <?php } ?>
-                <input name="surename" type="text" class="control half"  placeholder="Last Name" value="<?php echo htmlspecialchars
-                ($surename)?>">
-                <?php if(isset($surename_error)){ ?>
-                <p class="error"><?php echo $surename_error?></p>
+                <input id="surname" name="surname" type="text" class="control half"  placeholder="Last Name" value="<?php echo htmlspecialchars
+                ($surname)?>">
+                <?php if(isset($surname_error)){ ?>
+                <p class="error"><?php echo $surname_error?></p>
                 <?php } ?>
             </div>
             <div class="form-group">
-                <input name="email" type="text" class="control"  placeholder=" Email" value="<?php echo htmlspecialchars
+                <input id="email" name="email" type="text" class="control"  placeholder=" Email" value="<?php echo htmlspecialchars
                 ($email)?>">
                 <?php if(isset($email_error)){ ?>
                 <p class="error"><?php echo $email_error?></p>
                 <?php } ?>
             </div>
             <div class="form-group">
-                <input name = "password" type="password"  class="control" placeholder="New Password">
+                <input id  = "password" name = "password" type="password"  class="control" placeholder="New Password">
                 <?php if(isset($password_error)){ ?>
                 <p class="error"><?php echo $password_error?></p>
                 <?php } ?>
@@ -124,7 +124,7 @@
                 <p class="acord">By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy. You may receive SMS notifications from us and can opt out at any time.</p>
             </div>
             <div class="form-group">
-                <button class="btn" type="submit">Sign Up</button>
+                <button id="reg_submit" class="btn" type="submit">Sign Up</button>
             </div>
 
         </form>
@@ -133,6 +133,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 <script src = "../js/validate_jq.js" type="text/javascript" > </script>
+<script src = "../js/send_by_json.js" type="text/javascript" > </script>
 
 </body>
 
