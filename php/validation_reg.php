@@ -26,11 +26,12 @@
 
     if(empty($email_error) && empty($password_error)){
 
-
-        include("../html/welcome.html");
+        $response = [
+            "status" => "ok"];
+        echo json_encode($response);
         }
     else{
-        include ("../index.php");
+        echo "../index.php";
         }
 
 
